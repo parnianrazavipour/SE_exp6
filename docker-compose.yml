@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  interface:
+    build:
+      context: ./interface
+    ports:
+      - "5000:5000"
+    depends_on:
+      - backend1
+      - backend2
+      - backend3
+
+  backend1:
+    build:
+      context: ./backend
+    environment:
+      - FLASK_RUN_PORT=5001
+    ports:
+      - "5001:5001"
+    depends_on:
+      - db
+
+  backend2:
+    build:
+      context: ./backend
+    environment:
+      - FLASK_RUN_PORT=5002
+    ports:
+      - "5002:5002"
+    depends_on:
+      - db
+
+  backend3:
+    build:
+      context: ./backend
+    environment:
+      - FLASK_RUN_PORT=5003
+    ports:
+      - "5003:5003"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  db_data:
