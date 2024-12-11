@@ -27,7 +27,6 @@
 - هر سرویس Backend به یک پایگاه داده SQLite اشتراکی دسترسی دارد.
 - از Docker Compose برای ساخت و اجرای همزمان سرویس‌ها و از قابلیت `scale` برای افزایش تعداد نمونه‌های Backend استفاده شده است.
 
-(قرار دادن عکس از دیاگرام معماری)
 
 ## اجزای پروژه و فایل‌ها
 
@@ -122,6 +121,7 @@ curl -X POST -H "Content-Type: application/json" \
 ```
 در عکس زیر عملیات اضافه کردن رکورد جدید ( برای مثال کالا به همراه ارزش یا قیمت آن) و لیست کردن آن مشاهده میشود.
 
+
 ![image](https://github.com/user-attachments/assets/9394fa48-f26a-4914-b915-4f02c65d145f)
 
 
@@ -133,6 +133,7 @@ curl -X POST -H "Content-Type: application/json" \
 ![image](https://github.com/user-attachments/assets/637185e3-c40e-4c0e-b37f-3d3c8e580d1f)
 
 خروجی دستور sudo docker compose logs -f backend در ترمینال دیگر:
+
 
 ![image](https://github.com/user-attachments/assets/0df0ad42-53d6-410d-bc8b-65956cb59059)
 
@@ -149,6 +150,17 @@ docker compose up --build --scale backend=5
 
 
 ![image](https://github.com/user-attachments/assets/63dfc3dd-4319-4613-a8e3-7c7a66f17fd9)
+
+
+
+
+![image](https://github.com/user-attachments/assets/74567f32-998f-4ddd-b224-9bb1f078f2c7)
+
+
+
+
+![image](https://github.com/user-attachments/assets/bfc30ba7-ca66-4e43-b798-dfe3398dd77a)
+
 
 
 
