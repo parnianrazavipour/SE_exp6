@@ -32,16 +32,16 @@ Kanban Board : https://github.com/users/parnianrazavipour/projects/3
 
 ## اجزای پروژه و فایل‌ها
 
-- **backend/**  
+- بخش **backend/**  
   شامل کد سرویس Backend و یک فایل `Dockerfile` برای ساخت ایمیج Docker.
 
-- **interface/**  
+- بخش **interface/**  
   شامل کد سرویس Interface و یک فایل `Dockerfile` برای ساخت ایمیج Docker.
 
-- **nginx.conf**  
+- فایل **nginx.conf**  
   فایل پیکربندی Nginx برای هدایت درخواست‌ها به سرویس‌های Backend.
 
-- **docker-compose.yml**  
+- فایل **docker-compose.yml**  
   فایل Compose که شبکه، سرویس‌ها، وابستگی‌ها، volumeها و scaling را تعریف می‌کند.
 
 
